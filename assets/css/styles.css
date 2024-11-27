@@ -213,11 +213,12 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
   margin: 0;
 }
 
-#btn_modal {
+/* open modal buttons */
+
+.btn_modal {
   padding: 20px 5%;
   background-color: gray;
   border: none;
@@ -226,16 +227,28 @@ li {
   cursor: pointer;
   font-size: 1.5rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3 ease;
 }
 
-#btn_modal:hover {
+.btn_modal:hover {
   background-color: white;
   border: 2px solid black;
   color: black;
   cursor: pointer;
-  transition: all 0.3 ease;
 }
 
+.btn_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_list li {
+  margin-top: 20px;
+}
+
+/* btn ends */
+
+/* modal 1  */
 .modal_container {
   position: fixed;
   top: 0;
@@ -243,10 +256,13 @@ li {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  display: none;
+}
+
+.show_modal {
+  display: flex;
 }
 
 .modal_content {
@@ -268,14 +284,124 @@ li {
   font-size: 2rem;
 }
 
-#close_btn::before {
+/* modal 2 starts */
+
+.modal_content2 {
+  background-color: #78b3ce;
+  width: 30%;
+  height: 200px;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+}
+
+.modal_content2 h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.modal_content2 .close_btn::before {
+  content: none;
+  cursor: pointer;
+}
+
+.modal_content2 p {
+  margin-top: 20px;
+}
+
+.modal_content2 .button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.modal_content2 .close_btn {
+  padding: 10px 5%;
+  background-color: #fbf8ef;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* modal 2 ends */
+/* modal 3 starts */
+.modal_content3 {
+  background-color: white;
+  width: 30%;
+  height: 390px;
+}
+
+.modal_content3 .modal_dark {
+  color: white;
+  height: 200px;
+  background-color: #363062;
+}
+
+.modal_dark h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.modal_dark_heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+}
+
+.modal_dark_heading .close_btn::before {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: gray;
+}
+.modal_content3 .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email::before {
+  content: "\f0e0";
+  font-family: "font awesome 5 free";
+  font-size: 5rem;
+}
+
+.email span {
+  display: none;
+}
+
+.modal_light {
+  padding: 10px;
+  text-align: center;
+}
+
+.modal_light .close_btn::before {
+  content: none;
+}
+
+.modal_light > .close_btn {
+  padding: 10px 15%;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  background-color: #73ec8b;
+  border: none;
+  font-weight: 600;
+  color: white;
+}
+
+/* modal 3 ends */
+
+.model_content4 {
+}
+
+.close_btn::before {
   content: "\58";
   font-family: "font awesome 5 free";
   font-size: 2rem;
   cursor: pointer;
 }
 
-#close_btn span {
+.close_btn span {
   display: none;
 }
 
