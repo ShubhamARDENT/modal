@@ -180,7 +180,7 @@ sub {
 body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -209,14 +209,15 @@ li {
 
 /* start here*/
 
-.open-modal .wrapper {
+.btn_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  min-height: 50vh;
+  margin: 0;
 }
 
-.btn-modal {
+#btn_modal {
   padding: 20px 5%;
   background-color: gray;
   border: none;
@@ -224,12 +225,61 @@ li {
   color: white;
   cursor: pointer;
   font-size: 1.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.btn-modal:hover {
+#btn_modal:hover {
   background-color: white;
   border: 2px solid black;
   color: black;
   cursor: pointer;
   transition: all 0.3 ease;
+}
+
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal_content {
+  background-color: white;
+  width: 30%;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal_element1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 10px 5%;
+}
+
+.modal_content h1 {
+  font-size: 2rem;
+}
+
+#close_btn::before {
+  content: "\58";
+  font-family: "font awesome 5 free";
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#close_btn span {
+  display: none;
+}
+
+.modal_element3 {
+  padding: 50px 5%;
+  font-size: 1.2rem;
 }
