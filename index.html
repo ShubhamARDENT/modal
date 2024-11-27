@@ -23,6 +23,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/styles.css" />
   </head>
@@ -35,12 +41,33 @@
         <!-- start of btn -->
         <section class="open-modal">
           <div class="wrapper">
-            <button class="btn-modal">Click Me</button>
+            <div class="btn_container">
+              <button id="btn_modal">Click Me</button>
+            </div>
           </div>
           <!-- end of btn -->
         </section>
         <section class="modal">
-          <div class="wrapper"></div>
+          <div class="wrapper">
+            <div class="modal_container">
+              <div class="modal_content">
+                <div class="modal_element1">
+                  <div class="modal_element2">
+                    <h1>Hello world</h1>
+                  </div>
+                  <span id="close_btn"><span>close</span></span>
+                </div>
+            
+                <div class="modal_element3">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium quam ab deleniti provident architecto fugit
+                    magni? Modi dignissimos magnam illo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <!-- footer content of the page -->
