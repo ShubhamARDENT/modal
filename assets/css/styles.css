@@ -248,7 +248,7 @@ li {
 
 /* btn ends */
 
-/* modal 1  */
+/* modal container */
 .modal_container {
   position: fixed;
   top: 0;
@@ -265,6 +265,7 @@ li {
   display: flex;
 }
 
+/* modal 1  */
 .modal_content {
   background-color: white;
   width: 30%;
@@ -391,7 +392,37 @@ li {
 
 /* modal 3 ends */
 
-.model_content4 {
+.modal_content4 {
+  width: 25%;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+}
+
+.modal_content4 .modal_element19 {
+  font-size: 1rem;
+  border-bottom: none;
+  margin-top: 30px;
+  color: gray;
+}
+
+.modal_content4 .close_btn::before {
+  content: none;
+}
+
+.modal_content4 h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.modal_element19 .close_btn {
+  background-color: rgb(62, 165, 62);
+  border: none;
+  padding: 10px 40%;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .close_btn::before {

@@ -1,19 +1,24 @@
-// Functionality of the page should appear here
+// Select all buttons with the class 'btn_modal' and all modal containers
+const openButtons = document.querySelectorAll(".btn_modal");
+const closeButtons = document.querySelectorAll(".close_btn");
+const modals = document.querySelectorAll(".modal_container");
 
-var openButton = document.getElementById("btn_modal");
-var closeButton = document.getElementById("close_btn");
-var modal = document.querySelector(".modal_container");
+openButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    modals[index].classList.add("show_modal");
+  });
+});
 
-openButton.onclick = () => {
-  modal.style.display = "flex";
-};
+closeButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    modals[index].classList.remove("show_modal");
+  });
+});
 
-closeButton.onclick = () => {
-  modal.style.display = "none";
-};
-
-window.onclick = (event) => {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+modals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("show_modal");
+    }
+  });
+});
